@@ -4,6 +4,10 @@
 <head>
  <title>Google Project</title>
  <link href="https://fonts.googleapis.com/css?family=Ariel" rel="stylesheet">
+ <!--css같은 외부 파일을 가져올 때는 Head 안에 link tag로 입력-->
+ <link rel="stylesheet" type="text/css" href="./practice.css">
+ <!--상대참조를 위해서는 ./를 입력한 후 파일명을 적으면 현재 위치에 있는 파일을 참조 (혹은 ./없이 파일명만 입력-->
+
 </head>
 
 <body style="font-family:'Ariel', sans-serif !important; padding:0; margin:0" >
@@ -11,12 +15,12 @@
   <header>
     <div style="float:left; padding-top:22px; font-size:13px">
       <!--a랑span은 padding-top, margin-top이 안 된다-->
-      <a style="display:table-cell; vertical-align:middle; height:40px; text-decoration:none; color:rgba(0,0,0,.54); padding:0 30px 0 30px;" href="https://www.google.com/intl/en/about/?fg=1&utm_source=google.com&utm_medium=referral&utm_campaign=hp-header">About</a>
-      <a style="display:table-cell; vertical-align:middle; height:40px; text-decoration:none; color:rgba(0,0,0,.54);" href="https://store.google.com/?utm_source=hp_header&utm_medium=google_oo&utm_campaign=GS100042">Store</a>
+      <a style="display:table-cell; vertical-align:middle; height:40px; color:rgba(0,0,0,.54); padding:0 30px 0 30px;" href="https://www.google.com/intl/en/about/?fg=1&utm_source=google.com&utm_medium=referral&utm_campaign=hp-header">About</a>
+      <a style="display:table-cell; vertical-align:middle; height:40px; color:rgba(0,0,0,.54);" href="https://store.google.com/?utm_source=hp_header&utm_medium=google_oo&utm_campaign=GS100042">Store</a>
     </div>
     <div style="float:right; padding:22px 80px 0 0; font-size:13px">
-      <a style="vertical-align:middle; text-decoration:none; color:rgba(0,0,0,.54); display:table-cell;" href="https://mail.google.com/mail/u/0/?tab=wm">Gmail</a>
-      <a style="vertical-align:middle; text-decoration:none; color:rgba(0,0,0,.54); display:table-cell; padding:0 30px 0 30px" href="https://www.google.co.jp/imghp?hl=en&tab=wi&authuser=0">Image</a>
+      <a style="vertical-align:middle; color:rgba(0,0,0,.54); display:table-cell;" href="https://mail.google.com/mail/u/0/?tab=wm">Gmail</a>
+      <a style="vertical-align:middle; color:rgba(0,0,0,.54); display:table-cell; padding:0 30px 0 30px" href="https://www.google.co.jp/imghp?hl=en&tab=wi&authuser=0">Image</a>
       <label style="vertical-align:middle; padding:20px; background:url('https://lh3.googleusercontent.com/-HgHFAw80RHs/AAAAAAAAAAI/AAAAAAAAAAA/AA6ZPT6jemBZsBekHNxBb5u4x8dE1jm3XA/s64-c-mo/photo.jpg') center/100%; border-radius:100%; display:table-cell"></label>
     </div>
   </header>
@@ -24,35 +28,37 @@
 
   <div style="text-align:center; clear:both">
     <!--clear:both란? 위에 적용된 float 속성에 대한 영향을 끊고 가기 위해서 한 번 클린하는 세팅-->
-  <img src="https://www.clicktorelease.com/tmp/google-svg/image.svg" width="25%"
-    style="padding: 150px 80px 0px 80px;">
+  <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" width="272px;" height=92px"
+    style="padding: 150px 80px 30px 80px;">
 <br>
   <input type="text" name="" value="" placeholder="Google Search"
-    style="height:45px; width:600px; padding:0 0 0 20px;">
+    style="height:40px; width:450px; padding:0 0 0 20px;">
   </input>
-<div style="margin: 20px 0;">
-    <button style="color:rgba(0,0,0,.54)" type="button" name="lucky" value="testing luck">Google Search</button>
-    <button style="color:rgba(0,0,0,.54)" type="button" name="search" value="google search">I'm feeling lucky!</button>
-</div>
+<div class="pale-black" style="margin: 30px 0;">
+    <button class="pale-black search-box" type="button" name="lucky" value="testing luck">Google Search</button>
+    <a href="https://www.google.com/doodles/"><button class="pale-black lucky-box" type="button" name="search" value="google search">I'm Feeling Lucky!</button>
+    </a>
+  </div>
 
-<h5 style="margin-top:40px;">Google Offered in : <a href="https://www.google.co.kr" style="text-decoration:none">한국어</a>
-  <a href="https://www.google.co.jp" style="text-decoration:none">日本語</a>
-</h5>
+
+  <div style="font-size:small; margin-top:30px; padding:0 3px;">Google Offered in : <a href="https://www.google.co.kr" style="text-decoration:none; color:#1a0dab;">한국어</a>
+    <a href="https://www.google.co.jp" style="color:#1a0dab;">日本語</a>
+  </div>
 
 </div>
 </body>
-<footer style="color:rgba(0,0,0,.54); position:absolute; bottom:0; width:100%;">
-  <div style="background-color:#f2f2f2; border-top:1px solid #e4e4e4; border-left:1px solid #e4e4e4; border-right:1px solid #e4e4e4; line-height:40px; padding:0 0 0 30px; font-size: 15px;">Japan</div>
+<footer class="pale-black" style="position:absolute; bottom:0; width:100%;">
+  <div class="footer-item country-tag">Japan</div>
 <!--border를 사용할 때 굵기, 종류, 색깔 순서로 설정-->
-  <div style="background-color:#f2f2f2; border-top:1px solid #e4e4e4; border-bottom:1px solid #e4e4e4; border-left:1px solid #e4e4e4; border-right:1px solid #e4e4e4; line-height:40px; padding:0 30px 0 30px; font-size: 13px;">
-    <a style="text-decoration:none; color:rgba(0,0,0,.54);" href="https://www.google.com/intl/en_jp/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
+  <div class="footer-item" style="border-bottom:1px solid #e4e4e4; border-left:1px solid #e4e4e4; border-right:1px solid #e4e4e4; line-height:40px; padding:0 30px 0 30px; font-size: 13px;">
+    <a class="pale-black" href="https://www.google.com/intl/en_jp/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Advertising</a>
 
-    <a style="text-decoration:none; color:rgba(0,0,0,.54); padding:0 0 0 25px" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Business</a>
+    <a class="pale-black" style="padding:0 0 0 25px" href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1#?modal_active=none">Business</a>
     &nbsp;
   <div style="float:right;">
-    <a style="text-decoration:none; color:rgba(0,0,0,.54);" href="https://www.google.com/intl/en_jp/policies/privacy/?fg=1">Privacy</a>
-    <a style="text-decoration:none; color:rgba(0,0,0,.54); padding:0 25px 0 25px" href="https://www.google.com/intl/en_jp/policies/terms/regional.html">Terms</a>
-    <a style="text-decoration:none; color:rgba(0,0,0,.54);" href="none">Settings</a>
+    <a class="pale-black" href="https://www.google.com/intl/en_jp/policies/privacy/?fg=1">Privacy</a>
+    <a class="pale-black" style="padding:0 25px 0 25px" href="https://www.google.com/intl/en_jp/policies/terms/regional.html">Terms</a>
+    <a class="pale-black" href="none">Settings</a>
   </div>
 </footer>
 </html>
